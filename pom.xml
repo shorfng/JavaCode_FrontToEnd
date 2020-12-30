@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 父工程信息 -->
+    <!--【Java】06_JavaWeb_Server（服务器端）-->
+    <groupId>com.loto</groupId>
+    <artifactId>MyCode_JavaWeb_Server</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 子工程信息 -->
+    <modules>
+        <module>JavaWeb_6.1_XML</module>
+        <module>JavaWeb_6.2_HTTP</module>
+        <module>JavaWeb_6.4_Servlet</module>
+        <module>JavaWeb_6.5_JSP</module>
+        <module>JavaWeb_6.6_JSON</module>
+        <module>JavaWeb_6.7_Ajax</module>
+    </modules>
+
+    <!-- 解决Language Level版本问题 -->
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>
