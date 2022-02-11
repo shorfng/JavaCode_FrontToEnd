@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_Ajax_jQuery</title>
+</head>
+
+<script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+    // 1、get异步访问服务器端
+    function fn1() {
+        $.get(
+            "/JavaWeb01/Ajax_jQuery_Servlet",   // 请求的服务器端地址
+            {"name": "TD_get", "age": 25},      // 请求服务器端的数据
+            function (data) {                   // 执行成功后的回调函数
+                // data就是指从servlet返回的结果 {\"name\":\"蓝田\",\"age\":21}
+                alert(data.name);
+                alert(data.age);
+            },
+            "json"                              // 服务器端返回的数据类型
+        );
+    }
+
+    // 2、post异步访问服务器端
+    function fn2() {
+        $.post(
+            "/JavaWeb01/Ajax_jQuery_Servlet",   // 请求的服务器端地址
+            {"name": "TD_post", "age": 25},     // 请求服务器端的数据
+            function (data) {                   // 执行成功后的回调函数
+                // data就是指从servlet返回的结果 {\"name\":\"蓝田\",\"age\":21}
+                alert(data.name);
+                alert(data.age);
+            },
+            "json"                              // 服务器端返回的数据类型
+        );
+    }
+
+    // 3、Ajax访问服务器端
+    function fn3() {
+        $.ajax({
+            url: "/JavaWeb01/Ajax_jQuery_Servlet",   // 请求服务器端地址
+            async: true,                             // 异步
+            type: "POST",                            // 请求方式
+            data: {"name": "TD", "age": 25},         // 发送到服务器的参数
+            success: function (data) {               // 成功响应执行的函数
+                alert(data.name);
+                alert(data.age);
+            },
+            error: function () {
+                alert("请求失败");
+            },
+            dataType: "json"                         // 服务器端返回的数据类型
+        });
+    }
+</script>
+
+<body>
+
+<input type="button" value="get异步访问服务器端" onclick="fn1()"><span id="span1"></span><br>
+<input type="button" value="post异步访问服务器端" onclick="fn2()"><span id="span2"></span><br>
+<input type="button" value="Ajax访问服务器端" onclick="fn3()"><span id="span3"></span><br>
+
+</body>
+
+</html>

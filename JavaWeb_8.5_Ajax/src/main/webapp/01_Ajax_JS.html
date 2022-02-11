@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--访问地址：http://localhost:8080/JavaWeb01/06_Ajax/01_Ajax_JS.html-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_Ajax_JS</title>
+
+    <script type="text/javascript">
+
+        <!-- 异步访问服务器端 - GET请求 -->
+        function fn1() {
+            //（1）创建Ajax引擎对象 (所有的操作都是通过引擎对象)
+            var xmlHTTP = new XMLHttpRequest();
+
+            //（2）为Ajax引擎对象绑定监听事件（监听服务器是否已经返回相应数据给引擎）
+            xmlHTTP.onreadystatechange = function () {
+                // 当readyState=4，且状态status=200，表示请求已完成，且响应已就绪
+                if (xmlHTTP.readyState == 4 && xmlHTTP.status == 200) {
+                    //（5）接受响应数据
+                    var res = xmlHTTP.responseText;
+                    document.getElementById("span1").innerHTML = res;
+                }
+            }
+
+            //（3）绑定提交地址（参数1：请求方式 参数2：提交服务器端的客户端地址 参数3：是否异步）
+            xmlHTTP.open("GET", "/JavaWeb01/Ajax_JS_Servlet?name=TD", true);
+
+            //（4）发送请求
+            xmlHTTP.send();
+        }
+
+        <!-- 同步访问服务器端 - POST请求 -->
+        function fn2() {
+            //（1）创建Ajax引擎对象 (所有的操作都是通过引擎对象)
+            var xmlHTTP = new XMLHttpRequest();
+
+            //（2）为Ajax引擎对象绑定监听事件（监听服务器是否已经返回相应数据给引擎）
+            xmlHTTP.onreadystatechange = function () {
+                // 当readyState=4，且状态status=200，表示请求已完成，且响应已就绪
+                if (xmlHTTP.readyState == 4 && xmlHTTP.status == 200) {
+                    //（5）接受响应数据
+                    var res = xmlHTTP.responseText;
+                    document.getElementById("span2").innerHTML = res;
+                }
+            }
+
+            //（3）绑定提交地址（参数1：请求方式 参数2：提交服务器端的客户端地址 参数3：是否异步）
+            xmlHTTP.open("POST", "/JavaWeb01/Ajax_JS_Servlet", false);
+
+            //（4）发送请求(在此之前设置一个头)
+            xmlHTTP.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlHTTP.send("name=TD");
+        }
+    </script>
+
+</head>
+<body>
+
+<input type="button" value="异步访问服务器" onclick="fn1()"><span id="span1"></span><br>
+<input type="button" value="同步访问服务器" onclick="fn2()"><span id="span2"></span><br>
+<input type="button" value="测试按钮" onclick="alert()">
+
+</body>
+</html>
