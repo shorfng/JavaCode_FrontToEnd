@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON数据格式_05</title>
+</head>
+
+<!-- JSON数据格式：{"param1":"value0","param2":{},"param3":[{key1:value1,key2:value2},{key1:value3,key2:value4}]} -->
+<script language="JavaScript">
+    var json = {
+        "key1": "value1",
+        "key2": {"firstname": "张", "lastname": "三丰", "age": 100},
+        "key3": [
+            {"name": "小双", "age": 28, "addr": "扬州"},
+            {"name": "建宁", "age": 18, "addr": "紫禁城"},
+            {"name": "阿珂", "age": 10, "addr": "山西"},
+        ]
+    };
+
+    // 取数据
+    alert(json.key2.lastname);
+    alert(json.key3[2].name);
+</script>
+
+<body>
+JSON数据格式：
+{
+"param1":"value0",
+"param2":{},
+"param3":[{key1:value1,key2:value2},{key1:value3,key2:value4}]
+}
+
+{
+"param1": "value0",
+"param2": {},
+"param3": [
+{
+"key1": "value1",
+"key2": "value2"
+},
+{
+"key1": "value3",
+"key2": "value4"
+}
+]
+}
+</body>
+
+</html>

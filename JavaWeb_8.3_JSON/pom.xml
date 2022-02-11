@@ -6,23 +6,32 @@
 
     <!-- 子工程信息 -->
     <groupId>com.loto</groupId>
-    <artifactId>JavaWeb_6.6_JSON</artifactId>
+    <artifactId>JavaWeb_8.3_JSON</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>JavaWeb_6.6_JSON Maven Webapp</name>
+    <name>JavaWeb_8.3_JSON Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <!-- 解决Language Level版本问题 -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
+        </dependency>
+    </dependencies>
+
     <build>
-        <finalName>JavaWeb_6.6_JSON</finalName>
+        <finalName>JavaWeb_8.3_JSON</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>

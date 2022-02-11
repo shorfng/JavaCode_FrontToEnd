@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON数据格式_03</title>
+</head>
+
+<!-- JSON数据格式: {"param":[{key1:value1,key2:value2},{key1:value3,key2:value4}]} -->
+<script language="JavaScript">
+    var json = {
+        "baobao": [
+            {"name": "小双", "age": 28, "addr": "扬州"},
+            {"name": "建宁", "age": 18, "addr": "紫禁城"},
+            {"name": "阿珂", "age": 10, "addr": "山西"},
+        ]
+    };
+
+    // 取name = 建宁
+    alert(json.baobao[1].name);
+
+    // 取addr = 山西
+    alert(json.baobao[2].addr);
+</script>
+
+
+<body>
+JSON数据格式: {"param":[{key1:value1,key2:value2},{key1:value3,key2:value4}]}
+
+{
+"param": [
+{
+"key1": "value1",
+"key2": "value2"
+},
+{
+"key1": "value3",
+"key2": "value4"
+}
+]
+}
+</body>
+
+</html>

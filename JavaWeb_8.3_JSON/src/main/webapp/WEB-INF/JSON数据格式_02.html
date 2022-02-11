@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON数据格式_02</title>
+</head>
+
+<!-- JSON数据格式: [{key1:value1,key2:value2},{key1:value3,key2:value4}] -->
+<script language="JavaScript">
+    var persons = [
+        {"firstname": "张", "lastname": "三丰", "age": 100},
+        {"firstname": "李", "lastname": "四", "age": 25}
+    ];
+
+    // 取出 firstname=李
+    alert(persons[1].firstname);
+
+    // 取出 年龄100
+    alert(persons[0].age);
+</script>
+
+<body>
+JSON数据格式: [{key1:value1,key2:value2},{key1:value3,key2:value4}]
+
+[
+{
+"key1": "value1",
+"key2": "value2"
+},
+{
+"key1": "value3",
+"key2": "value4"
+}
+]
+</body>
+
+</html>
