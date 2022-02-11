@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-12-28 20:25
+  PageName：index.html
+  Function：XML应用场景/作用（存放数据）
+-->
+
+<persons>
+    <person id="p001">
+        <name>张三</name>
+    </person>
+    <person id="p002">
+        <name>李四</name>
+    </person>
+</persons>
+
+<!-- 类似以下Java代码
+class Person{
+String id;
+String name;
+}
+
+@Test
+public void test(){
+HashSet<Person> persons = new HashSet<Person>();
+persons.add( new Person("p001","张三") );
+persons.add( new Person("p002","李四") );
+}
+
+-->

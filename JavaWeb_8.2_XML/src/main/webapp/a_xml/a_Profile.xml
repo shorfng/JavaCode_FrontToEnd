@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-12-28 20:25
+  PageName：index.html
+  Function：XML应用场景/作用（配置文件）
+-->
+
+<beans>
+    <bean id="user1" className="com.loto.java.User">
+        <property name="id" value="u001"></property>
+        <property name="username" value="jack"></property>
+        <property name="pwd" value="1234"></property>
+    </bean>
+    <bean id="user2" className="com.loto.java.User">
+        <property name="id" value="u002"></property>
+        <property name="username" value="rose"></property>
+        <property name="pwd" value="5678"></property>
+    </bean>
+</beans>
+
+<!-- 类似以下Java代码
+class Bean{
+     private String id;
+private String className;
+private Properties prop;
+//补全set\get方法
+}
+
+@Test
+public void test(){
+HashSet<Bean> beans = new HashSet<Bean>();
+Bean b1 = new Bean();
+b1.setId("user1");
+b1.setClassName("com.loto.java.User");
+Properties prop = new Properties();
+prop.setProperties("id","u001");
+prop.setProperties("username","jack");
+prop.setProperties("pwd","1234");
+b1.setProp( prop );
+Bean b2 = new Bean();
+b2.setId("user2");
+b2.setClassName("com.loto.java.User");
+Properties prop = new Properties();
+prop.setProperties("id","u002");
+prop.setProperties("username","rose");
+prop.setProperties("pwd","5678");
+b2.setProp( prop );
+beans.add(b1);
+beans.add(b2);
+}
+
+
+-->

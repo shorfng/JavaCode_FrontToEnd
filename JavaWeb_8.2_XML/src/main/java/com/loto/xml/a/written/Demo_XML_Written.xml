@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 文档声明 -->
+
+<!-- 根元素：hello -->
+<hello version="1" id="1">  <!-- 属性 -->
+
+	<!-- 元素 -->
+	<c>&lt;AAAA</c> 	<!-- 普通元素 -->
+	<a />               <!-- 空元素 -->
+
+	<!-- CDATA特殊字符编写-->
+	<b>
+		<![CDATA[
+			if(a>b&&b<c){
+			if……
+		}
+		]]>
+	</b>
+
+</hello>
