@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <!-- 欢迎页面配置 -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 监听器配置（监听域对象的创建与销毁的监听器 - 3种）-->
+    <listener>
+        <listener-class>com.loto.listener.a.creat.a_ServletContextListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.loto.listener.a.creat.b_HttpSessionListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.loto.listener.a.creat.c_ServletRequestListener</listener-class>
+    </listener>
+
+    <!-- 监听器配置（监听域对象的属性变化的监听器 - 3种）-->
+    <listener>
+        <listener-class>com.loto.listener.b.Attribute.a_ServletContextAttibuteListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.loto.listener.b.Attribute.b_HttpSessionAttributeListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.loto.listener.b.Attribute.c_ServletRequestAttributeListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>Test_AttributeListenerServlet</servlet-name>
+        <servlet-class>com.loto.listener.b.Attribute.Test_AttributeListenerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test_AttributeListenerServlet</servlet-name>
+        <url-pattern>/Test_AttributeListenerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 监听器配置（监听特殊JavaBean在session作用域绑定或解绑的监听器 - 1种）-->
+    <servlet>
+        <servlet-name>Test_HttpSessionBindingListenerServlet</servlet-name>
+        <servlet-class>com.loto.listener.c.HttpSessionBindingListener.Test_HttpSessionBindingListenerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test_HttpSessionBindingListenerServlet</servlet-name>
+        <url-pattern>/Test_HttpSessionBindingListenerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 监听器配置（监听特殊JavaBean在session作用域钝化或活化的监听器 - 1种）-->
+    <servlet>
+        <servlet-name>TestSet_HttpSessionActivationListenerServlet</servlet-name>
+        <servlet-class>com.loto.listener.d.HttpSessionActivationListener.TestSet_HttpSessionActivationListenerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestSet_HttpSessionActivationListenerServlet</servlet-name>
+        <url-pattern>/TestSet_HttpSessionActivationListenerServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestGet_HttpSessionActivationListenerServlet</servlet-name>
+        <servlet-class>com.loto.listener.d.HttpSessionActivationListener.TestGet_HttpSessionActivationListenerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestGet_HttpSessionActivationListenerServlet</servlet-name>
+        <url-pattern>/TestGet_HttpSessionActivationListenerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 在用户的生日当前发送邮件 -->
+    <listener>
+        <listener-class>com.loto.listener.f.example.birthday.Birthday_ServletContextListener</listener-class>
+    </listener>
+</web-app>

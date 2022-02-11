@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <!-- 欢迎页面配置 -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 1、注册servlet -->
+    <servlet>
+        <servlet-name>a_Servlet_use</servlet-name>                              <!-- servlet名称，当前xml中唯一 -->
+        <servlet-class>com.loto.servlet.a.servlet.a_Servlet_use</servlet-class> <!-- servlet实现类的全限定类名 -->
+    </servlet>
+
+    <!-- 2、给注册的servlet添加映射路径 -->
+    <servlet-mapping>
+        <servlet-name>a_Servlet_use</servlet-name>  <!-- 已经注册的servlet名称（必须与注册的名称一致）-->
+        <url-pattern>/a_Servlet_use</url-pattern>   <!-- 访问路径（必须/开头）-->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>success</servlet-name>
+        <servlet-class>com.loto.servlet.a.servlet.SuccessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>success</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>a_ServletContext_use</servlet-name>
+        <servlet-class>com.loto.servlet.b.servletcontext.a_ServletContext_use</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>a_ServletContext_use</servlet-name>
+        <url-pattern>/a_ServletContext_use</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>c3p0</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>b_ServletContext_set</servlet-name>
+        <servlet-class>com.loto.servlet.b.servletcontext.b_ServletContext_set</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>b_ServletContext_set</servlet-name>
+        <url-pattern>/b_ServletContext_set</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>c_ServletContext_get</servlet-name>
+        <servlet-class>com.loto.servlet.b.servletcontext.c_ServletContext_get</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>c_ServletContext_get</servlet-name>
+        <url-pattern>/c_ServletContext_get</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.loto.servlet.c.example.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>a_HTTPServletResponse_setStatus</servlet-name>
+        <servlet-class>com.loto.servlet.d1.httpservletresponse.a_HTTPServletResponse_setStatus</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>a_HTTPServletResponse_setStatus</servlet-name>
+        <url-pattern>/a_HTTPServletResponse_setStatus</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>b_HTTPServletResponse_setHeader</servlet-name>
+        <servlet-class>com.loto.servlet.d1.httpservletresponse.b_HTTPServletResponse_setHeader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>b_HTTPServletResponse_setHeader</servlet-name>
+        <url-pattern>/b_HTTPServletResponse_setHeader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>c_HTTPServletResponse_setBody</servlet-name>
+        <servlet-class>com.loto.servlet.d1.httpservletresponse.c_HTTPServletResponse_setBody</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>c_HTTPServletResponse_setBody</servlet-name>
+        <url-pattern>/c_HTTPServletResponse_setBody</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownloadFile_CN</servlet-name>
+        <servlet-class>com.loto.servlet.h2.downloadfile.DownloadFile_CN</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadFile_CN</servlet-name>
+        <url-pattern>/DownloadFile_CN</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownloadFile_EN</servlet-name>
+        <servlet-class>com.loto.servlet.h2.downloadfile.DownloadFile_EN</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadFile_EN</servlet-name>
+        <url-pattern>/DownloadFile_EN</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VerificationCode</servlet-name>
+        <servlet-class>com.loto.servlet.d2.example.VerificationCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerificationCode</servlet-name>
+        <url-pattern>/VerificationCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>a_HTTPServletRequest_getLine</servlet-name>
+        <servlet-class>com.loto.servlet.e1.httpservletrequest.a_HTTPServletRequest_getLine</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>a_HTTPServletRequest_getLine</servlet-name>
+        <url-pattern>/a_HTTPServletRequest_getLine</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>b_HTTPServletRequest_getHeader</servlet-name>
+        <servlet-class>com.loto.servlet.e1.httpservletrequest.b_HTTPServletRequest_getHeader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>b_HTTPServletRequest_getHeader</servlet-name>
+        <url-pattern>/b_HTTPServletRequest_getHeader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>c_HTTPServletRequest_getBody</servlet-name>
+        <servlet-class>com.loto.servlet.e1.httpservletrequest.c_HTTPServletRequest_getBody</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>c_HTTPServletRequest_getBody</servlet-name>
+        <url-pattern>/c_HTTPServletRequest_getBody</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>d_HTTPServletRequest_set</servlet-name>
+        <servlet-class>com.loto.servlet.e1.httpservletrequest.d_HTTPServletRequest_set</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>d_HTTPServletRequest_set</servlet-name>
+        <url-pattern>/d_HTTPServletRequest_set</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>e_HTTPServletRequest_get</servlet-name>
+        <servlet-class>com.loto.servlet.e1.httpservletrequest.e_HTTPServletRequest_get</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>e_HTTPServletRequest_get</servlet-name>
+        <url-pattern>/e_HTTPServletRequest_get</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.loto.servlet.e2.example.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <servlet-class>com.loto.servlet.e2.example.UserLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <url-pattern>/UserLoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>a_SendCookie</servlet-name>
+        <servlet-class>com.loto.servlet.f.cookie.a_SendCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>a_SendCookie</servlet-name>
+        <url-pattern>/a_SendCookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>b_GetCookie</servlet-name>
+        <servlet-class>com.loto.servlet.f.cookie.b_GetCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>b_GetCookie</servlet-name>
+        <url-pattern>/b_GetCookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>c_RemoveCookie</servlet-name>
+        <servlet-class>com.loto.servlet.f.cookie.c_RemoveCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>c_RemoveCookie</servlet-name>
+        <url-pattern>/c_RemoveCookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LastAccessTimeServlet</servlet-name>
+        <servlet-class>com.loto.servlet.f.cookie.LastAccessTimeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LastAccessTimeServlet</servlet-name>
+        <url-pattern>/LastAccessTimeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>a_GetSession</servlet-name>
+        <servlet-class>com.loto.servlet.g.session.a_GetSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>a_GetSession</servlet-name>
+        <url-pattern>/a_GetSession</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>b_SaveToSession</servlet-name>
+        <servlet-class>com.loto.servlet.g.session.b_SaveToSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>b_SaveToSession</servlet-name>
+        <url-pattern>/b_SaveToSession</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>c_GetFromSession</servlet-name>
+        <servlet-class>com.loto.servlet.g.session.c_GetFromSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>c_GetFromSession</servlet-name>
+        <url-pattern>/c_GetFromSession</url-pattern>
+    </servlet-mapping>
+</web-app>
